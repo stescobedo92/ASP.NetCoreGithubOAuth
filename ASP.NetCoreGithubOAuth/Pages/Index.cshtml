@@ -7,7 +7,7 @@
 <div class="row">
     @if (!User.Identity.IsAuthenticated)
     {
-        <a> <strong>asp-action</strong>="Login" <strong>asp-controller</strong>="Auth" class="btn btn-outline-primary">Log In with GitHub</a>
+        @Html.ActionLink("Log In with GitHub", "Login","Auth", new { @class = "btn btn-outline-primary" },null)
     }
     else
     {
