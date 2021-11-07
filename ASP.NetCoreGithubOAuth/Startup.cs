@@ -69,8 +69,8 @@ namespace ASP.NetCoreGithubOAuth
                .AddCookie()
                .AddOAuth("GitHub", options =>
                {
-                   options.ClientId = Configuration["GitHub:ClientId"];
-                   options.ClientSecret = Configuration["GitHub:ClientSecret"];
+                   options.ClientId = Configuration["GitHubOAuth:ClientId"];
+                   options.ClientSecret = Configuration["GitHubOAuth:ClientSecret"];
                    options.CallbackPath = new PathString("/github-oauth");
                    options.AuthorizationEndpoint = "https://github.com/login/oauth/authorize";
                    options.TokenEndpoint = "https://github.com/login/oauth/access_token";
