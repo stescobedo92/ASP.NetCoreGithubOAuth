@@ -43,13 +43,9 @@ namespace ASP.NetCoreGithubOAuth
             {
                 app.UseExceptionHandler("/Error");
             }
-
             app.UseStaticFiles();
-
             app.UseRouting();
-
-            app.UseAuthorization();
-
+            app.UseAuthentication();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
