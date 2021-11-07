@@ -52,7 +52,9 @@ namespace ASP.NetCoreGithubOAuth
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
             });
         }
 
